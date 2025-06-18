@@ -1,0 +1,21 @@
+export const inputFields = [
+  { label: "First Name", name: "name.first", required: true },
+  { label: "Middle Name", name: "name.middle" },
+  { label: "Last Name", name: "name.last", required: true },
+  { label: "Phone Number", name: "phone", type: "number", required: true },
+  { label: "Email", name: "email", type: "email", required: true },
+  { label: "Password", name: "password", type: "password", required: true },
+  { label: "Image URL", name: "image.url", type: "url" },
+  { label: "Image Alt Text", name: "image.alt" },
+  { label: "State", name: "address.state" },
+  { label: "Country", name: "address.country", required: true },
+  { label: "City", name: "address.city", required: true },
+  { label: "Street", name: "address.street", required: true },
+  {
+    label: "House Number",
+    name: "address.houseNumber",
+    type: "number",
+    required: true,
+  },
+  { label: "ZIP Code", name: "address.zip", type: "number", required: true },
+];

@@ -1,0 +1,157 @@
+body {
+    @apply text-black dark:bg-slate-950 dark:text-white
+}
+
+
+
+.hader {
+ @apply bg-gray-400 h-20  flex items-center dark:bg-gray-800
+}
+
+
+.haderTitle {
+    @apply  text-5xl ml-5 dark:text-white
+}
+
+.headerButton {
+    @apply text-black ml-10 mt-3 bg-transparent dark:text-white !important
+}
+
+.search {
+    @apply rounded-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block ml-[43%] w-60 ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 !important
+}
+
+
+
+.searchIcon{
+    @apply absolute ml-[74.5%] dark:text-white !important
+}
+
+
+
+.signUp {
+    @apply ml-10 bg-blue-600 hover:bg-sky-400 !important
+}
+
+
+.login {
+    @apply ml-6 bg-blue-600 hover:bg-sky-400 !important
+}
+
+
+
+.mainTitle {
+    @apply text-6xl mt-8 ml-16
+}
+
+
+.mainH2{
+    @apply text-3xl ml-16 mt-4 mb-5
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.cardsContainer {
+    @apply flex w-[100%]
+}
+
+
+.allCardsDiv {
+    @apply grid grid-cols-3 w-[65%] m-auto gap-8
+}
+
+
+
+
+.eachCard {
+    @apply w-[100%] h-[100%] m-auto  rounded-lg p-5 transition hover:scale-105  dark:border hover:cursor-pointer
+}
+
+
+
+.eachCard img{
+    @apply  m-auto w-[100%] h-[250px] mb-8 rounded-3xl
+}
+
+
+
+
+.eachCard h3{
+    @apply text-3xl
+}
+
+
+.eachCard h4{
+    @apply text-xl ml-6 mb-9 
+}
+
+
+
+.bold {
+    @apply font-bold underline
+}
+
+
+
+
+
+.insideText {
+    @apply text-base mb-3
+}
+
+
+
+.footer {
+    @apply mt-7 w-[100%] text-center flex justify-center
+}
+
+
+
+
+
+.qcard {
+    @apply fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+    rounded-[50px] w-2/3 h-1/2 bg-sky-600 dark:bg-sky-950 shadow-lg z-50;
+}
+
+
+
+
+
+.qcardTitle {
+    @apply text-black text-6xl font-bold mt-10 text-center dark:text-white
+}
+
+
+
+.qcardText {
+    @apply text-white w-1/2 m-auto text-3xl font-bold mt-20 text-center drop-shadow-[2px_2px_0_black] dark:drop-shadow-sm
+}
+
+
+.qcardText2 {
+    @apply text-5xl mt-5
+}
+
+
+
+.exitBtn {
+    @apply rounded-[50px] w-20 h-10 bg-red-600 block m-auto mt-20 hover:bg-red-500 hover:scale-110 transition text-xl
+}
+
+
+
+.constructionImage{
+    @apply w-52 m-auto
+}
+
+
