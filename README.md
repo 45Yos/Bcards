@@ -29,45 +29,6 @@ A full-featured web application for managing, creating, liking, and browsing bus
 
 ---
 
-## 🚀 Getting Started Locally
-
-### 1. Clone the project:
-
-```bash
-git clone https://github.com/your-username/business-cards-app.git
-cd business-cards-app
-```
-
-### 2. Install dependencies:
-
-```bash
-npm install
-```
-
-### 3. Run the development server:
-
-```bash
-npm run dev
-```
-
-The app will run on `http://localhost:5173` by default (Vite).
-
----
-
-## 🌍 Deploy Online
-
-This project can be deployed easily on platforms like **Vercel** or **Netlify**.
-
-### ▶ Deploy to Vercel (Recommended):
-
-1. Push your code to GitHub.
-2. Go to [https://vercel.com](https://vercel.com) and log in.
-3. Click **"Add New Project"** → Import your repo.
-4. Choose **Framework: Vite** or **React**
-5. Deploy.
-
----
-
 ## 🔐 Authentication & Blocking Logic
 
 - The app limits failed login attempts to **3**.
