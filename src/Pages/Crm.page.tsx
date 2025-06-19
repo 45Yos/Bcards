@@ -42,14 +42,13 @@ const CrmPage = () => {
   useEffect(() => {
     getAllUsers().then((data) => {
       setUsers(data);
-      console.log(data);
     });
   }, []);
 
   const deleteUser = async (userId: string) => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.delete(
+      await axios.delete(
         `https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users/${userId}`,
         {
           headers: {
@@ -58,7 +57,6 @@ const CrmPage = () => {
         },
       );
 
-      console.log(res);
 
       setUsers((prevUsers) => prevUsers.filter((user) => user._id !== userId));
       toast.success("User deleted successfully!");
@@ -74,7 +72,7 @@ const CrmPage = () => {
   const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
 
   return (
-    <div className="p-8">
+    <div className="p-8 w-full">
       <h1 className="mb-4 text-3xl font-bold text-gray-800 dark:text-white">
         CRM
       </h1>
@@ -82,7 +80,7 @@ const CrmPage = () => {
         This is the CRM page where you can manage your users.
       </p>
 
-      <div className="overflow-x-auto rounded-lg shadow-md">
+      <div className="w-full overflow-x-auto rounded-lg shadow-md">
         <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
           <thead className="bg-gray-100 dark:bg-gray-700">
             <tr>
@@ -122,7 +120,7 @@ const CrmPage = () => {
                   </button>
                 </td>
 
-                <td className="px-6 py-4 text-gray-800 dark:text-gray-100">
+                <td className="px-6  text-gray-800 dark:text-gray-100">
                   {user.isAdmin ? "Admin" : user.isBusiness ? "Business" : ""}
                 </td>
               </tr>

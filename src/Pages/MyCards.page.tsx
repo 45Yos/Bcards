@@ -77,12 +77,12 @@ const MyCards = () => {
 
   return (
     <div className="p-4">
-      <h1 className="mb-4 text-center text-2xl font-bold">הכרטיסים שלי</h1>
+      <h1 className="mb-4 text-center text-2xl font-bold"> My Cards</h1>
 
       {error && <p className="text-center text-red-500">{error}</p>}
 
       <div className="cardsContainer">
-        <div className="allCardsDiv grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid m-auto gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {myCards.map((card) => (
             <div className="eachCard" key={card._id}>
               <Card

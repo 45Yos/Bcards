@@ -13,7 +13,7 @@ const NavbarHeader = ({ onSearch }: NavbarHeaderProps) => {
   const navigate = useNavigate();
 
   return (
-    <nav className="flex flex-col items-center justify-between border-b-2 border-slate-200 p-4 dark:border-slate-700 dark:bg-slate-800 dark:text-white md:flex-row">
+    <nav className="flex flex-col items-center justify-between border-b-2 border-slate-200 p-2 dark:border-slate-700 dark:bg-slate-800 dark:text-white md:flex-row">
       <div className="flex-1">
         <Link to="/" className="text-xl font-semibold">
           My App
@@ -35,7 +35,7 @@ const NavbarHeader = ({ onSearch }: NavbarHeaderProps) => {
         />
       </div>
 
-      <div className="flex flex-1 flex-wrap items-center justify-end gap-4 text-sm md:text-base">
+      <div className="flex p-3 flex-wrap items-center justify-end gap-4 text-sm md:text-base">
         <DarkThemeToggle />
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
@@ -55,7 +55,10 @@ const NavbarHeader = ({ onSearch }: NavbarHeaderProps) => {
             {isAdmin && <Link to="/crm">CRM</Link>}
 
             {(isBusiness || isAdmin) && (
+              <>
               <Link to="/createCard">Create Card</Link>
+              <Link to="/myCards">My Cards</Link>
+              </>
             )}
             <Link
               to="/likedCards"
