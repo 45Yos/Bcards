@@ -1,4 +1,3 @@
-
 # 📇 Business Cards Web App
 
 A full-featured web application for managing, creating, liking, and browsing business cards. Built with React, TypeScript, and TailwindCSS.
@@ -86,6 +85,7 @@ https://monkfish-app-z9uza.ondigitalocean.app/bcard2
 ```
 
 You must include a valid JWT token for protected routes:
+
 ```http
 Header: x-auth-token: <your-token-here>
 ```
@@ -102,7 +102,7 @@ _Add screenshots of your app here if desired._
 
 **Yossi Tzabari**  
 🎬 Video Editor & Fullstack Developer  
-🌍 [Portfolio Website](https://45yos.github.io/Video-Editor/VideoEditor/VideoEditor.html)
+🌍 [Portfolio Website](https://45yos.github.io/Yossi-Tsabari-Portfolio/)
 
 ---
 
