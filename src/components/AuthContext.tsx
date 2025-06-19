@@ -41,7 +41,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const handleToken = (token: string) => {
     try {
       const decoded = jwtDecode<JWTPayload>(token);
-      console.log("Decoded token:", decoded);
 
       setIsLoggedIn(true);
       setIsBusiness(decoded.isBusiness);

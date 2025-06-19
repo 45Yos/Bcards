@@ -17,6 +17,9 @@ export default function Navbar({ onSearch }: NavbarProps) {
   return (
     <nav className="flex flex-col items-center justify-between border-b-2 border-slate-200 p-2 dark:border-slate-700 dark:bg-slate-800 dark:text-white md:flex-row">
       <div className="flex-1 flex items-center">
+        <Link to="/" className="text-xl font-semibold ml-4">
+          My App
+        </Link>
         <button
           className="md:hidden ml-4 text-gray-700 dark:text-gray-200"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -34,9 +37,6 @@ export default function Navbar({ onSearch }: NavbarProps) {
             <path d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-        <Link to="/" className="text-xl font-semibold ml-4">
-          My App
-        </Link>
       </div>
 
       {isAdmin && (
@@ -59,7 +59,7 @@ export default function Navbar({ onSearch }: NavbarProps) {
       <div
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } flex-col md:flex-row md:flex p-3 flex-wrap items-center justify-end gap-4 text-sm md:text-base md:flex`}
+        } flex-col md:flex-row md:flex p-3 flex-wrap items-center justify-end gap-4 text-sm md:text-base`}
       >
         <DarkThemeToggle />
         <Link to="/" onClick={() => setIsMenuOpen(false)}>
