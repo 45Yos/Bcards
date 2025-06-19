@@ -26,6 +26,7 @@ function App({ searchTerm }: { searchTerm: string }) {
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 6;
   const { userId } = useAuth();
+  const [showPromo, setShowPromo] = useState(false);
 
   const getCards = async () => {
     try {
@@ -129,13 +130,33 @@ function App({ searchTerm }: { searchTerm: string }) {
         style={{ border: "groove" }}
       />
 
-      <div className="footer mt-4 flex justify-center">
-        <BsFillInfoCircleFill
-          onClick={() => alert("Create Card feature coming soon!")}
-          className="cursor-pointer text-4xl transition hover:scale-125"
-        />
-      </div>
-    </main>
+<div className="footer mt-4 flex justify-center relative">
+  <BsFillInfoCircleFill
+    onClick={() => setShowPromo(true)}
+    className="cursor-pointer text-4xl transition hover:scale-125"
+  />
+
+  {showPromo && (
+    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  w-[50%] h-[60%] rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800 justify-content-center flex align-items-center">
+      <div className="flex flex-col w-[70%] m-auto">
+
+      <h2 className="mb-12 text-3xl font-bold text-gray-800 dark:text-white">
+        Ready to Stand Out?
+      </h2>
+      <p className="text-lg text-gray-600 dark:text-gray-300">
+        Create your personalized business card in just a few clicks! Boost your visibility and connect with more clients today.
+      </p>
+      <button
+        onClick={() => setShowPromo(false)}
+        className="mt-14 w-1/2 m-auto rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+        >
+        Got It!
+      </button>
+        </div>
+    </div>
+  )}
+</div>
+</main>
   );
 }
 
